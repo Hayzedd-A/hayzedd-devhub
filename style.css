@@ -59,6 +59,14 @@ img {
   box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
 
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
 .primary-btn-outline {
   border-color: var(--primary);
   color: var(--primary);
@@ -401,15 +409,16 @@ main {
 
 .tech-card i {
   font-size: 40px;
+  transition: all 0.3s ease;
 }
 
 .tech-card span {
   font-weight: 600;
   font-size: 14px;
-  color: #333;
 }
 
 .tech-card:hover {
+  color: var(--primary);
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }

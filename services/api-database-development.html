@@ -64,6 +64,10 @@
     />
     <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
     <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -108,7 +112,7 @@
                 <a class="nav-link" href="../index.html#hero-area">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../index.html#about">About</a>
+                <a class="nav-link" href="../about.html">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -124,17 +128,14 @@
 
                 <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                   <li>
-                    <a
-                      class="dropdown-item"
-                      href="/services/web-development.html"
-                    >
+                    <a class="dropdown-item" href="web-development.html">
                       Web Development & Custom Solutions
                     </a>
                   </li>
                   <li>
                     <a
                       class="dropdown-item"
-                      href="/services/api-database-development.html"
+                      href="api-database-development.html"
                     >
                       API Development & Database Design
                     </a>
@@ -142,7 +143,7 @@
                   <li>
                     <a
                       class="dropdown-item"
-                      href="/services/deployment-web-maintenance.html"
+                      href="deployment-web-maintenance.html"
                     >
                       Cloud Deployment & Web Maintenance
                     </a>
@@ -150,17 +151,17 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../index.html#projects">Projects</a>
+                <a class="nav-link" href="../projects.html">Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="../index.html#contact">Contact</a>
+                <a class="nav-link" href="../contact.html">Contact</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </section>
-    <main>
+    <main id="top-main">
       <!-- Hero -->
       <section class="service-page-hero">
         <div class="container mb-5">
@@ -243,8 +244,9 @@
             <div class="col-lg-6">
               <div class="service-detail-image">
                 <img
-                  src="/assets/images/header/business-innovation.avif"
+                  src="/assets/images/blog/database.png"
                   alt="API development architecture diagram showing database connections and endpoints"
+                  style="border-radius: 10px; width: 100%"
                 />
               </div>
             </div>
@@ -598,10 +600,10 @@
             <div class="footer-widget">
               <h5>Quick Links</h5>
               <ul class="f-link">
-                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../about.html">About</a></li>
                 <li><a href="../index.html#services">Services</a></li>
-                <li><a href="../index.html#projects">Projects</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../contact.html">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -646,7 +648,9 @@
       </div>
     </footer>
 
-    <a href="#" class="scroll-top"><i class="lni lni-chevron-up"></i></a>
+    <a href="#top-main" class="scroll-top"
+      ><i class="lni lni-chevron-up"></i
+    ></a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="../script.js"></script>
   </body>
