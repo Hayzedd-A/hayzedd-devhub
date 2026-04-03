@@ -137,10 +137,11 @@ main {
   padding-top: 110px;
 }
 
-.container {
+.row {
   /* background: #1d1d1d43; */
-  /* margin: 30px 0; */
+  /* gap: 1em */
 }
+
 
 .header-eight::before {
   content: "";
@@ -187,6 +188,9 @@ main {
   filter: brightness(0) invert(1);
 }
 
+.dropdown-menu {
+  background-color: inherit;
+}
 .section-title-five {
   text-align: center;
   max-width: 650px;
@@ -599,9 +603,153 @@ main {
     font-size: 2rem;
   }
   .navbar-area.navbar-nine .navbar-collapse {
-    background: var(--primary);
+    /* background: var(--primary); */
     padding: 20px;
     margin-top: 15px;
     border-radius: 5px;
   }
+  .row > * {
+    padding: 0.5em;
+  }
+}
+
+/* Quote Questionnaire Styles */
+.quote-wizard-card {
+  border-color: var(--gray-4) !important;
+  transition: all 0.3s ease;
+}
+
+.progress-bar {
+  background-color: var(--primary);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quote-step {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.option-card {
+  padding: 20px;
+  border: 2px solid var(--gray-4);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.option-card:hover {
+  border-color: var(--primary);
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.option-card.selected {
+  border-color: var(--primary);
+  background-color: var(--primary-light);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+}
+
+.option-card.selected::after {
+  content: "✓";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--primary);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.option-card i {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.option-card span {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.quote-text-input {
+  /* min-height: 150px; */
+  border-radius: 12px;
+  padding: 15px;
+  border: 2px solid var(--gray-4);
+  transition: border-color 0.3s ease;
+}
+
+.quote-text-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-light);
+  outline: none;
+}
+
+.quote-navigation .btn {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.question-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--black);
+}
+
+.question-subtitle {
+  color: var(--dark-3);
+  margin-bottom: 30px;
+}
+
+#quote-steps-container {
+  min-height: 300px;
+}
+
+.skip-container .btn-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.skip-container .btn-link:hover {
+  color: var(--primary) !important;
+  transform: translateX(5px);
+}
+
+.skip-hint {
+  font-size: 0.75rem;
+  color: var(--dark-3);
+  margin-top: 5px;
+  font-style: italic;
 }
