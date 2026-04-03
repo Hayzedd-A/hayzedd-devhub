@@ -189,13 +189,17 @@ main {
 }
 
 .dropdown-menu {
-  background-color: inherit;
+  background-color: rgb(127,170,240);
 }
 .section-title-five {
   text-align: center;
   max-width: 650px;
   margin: auto;
   margin-bottom: 50px;
+}
+
+section {
+  padding: 30px 0;
 }
 
 .section-title-five h6 {
@@ -262,9 +266,9 @@ main {
   margin-top: 10px;
 }
 
-.services-eight {
+/* .services-eight {
   padding: 100px 0;
-}
+} */
 
 .single-services {
   padding: 40px 30px;
@@ -305,7 +309,7 @@ main {
 }
 
 .process-section {
-  padding: 100px 0;
+  padding: 50px 0;
   background: var(--light-3);
 }
 
@@ -609,7 +613,7 @@ main {
     border-radius: 5px;
   }
   .row > * {
-    padding: 0.5em;
+    padding: 1em;
   }
 }
 
