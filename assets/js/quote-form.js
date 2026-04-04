@@ -256,7 +256,12 @@ document.addEventListener("DOMContentLoaded", function () {
     questionnaire.forEach((q, idx) => {
       const key = q.key || `question_${idx}`;
       // answers[idx] might be undefined if skipped, handle gracefully
-      payload[key] = answers[idx] !== undefined ? answers[idx] : (q.optType === "multi" ? [] : "");
+      payload[key] =
+        answers[idx] !== undefined
+          ? answers[idx]
+          : q.optType === "multi"
+            ? []
+            : "";
     });
 
     try {
@@ -278,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <i class="lni lni-checkmark-circle text-success" style="font-size: 80px;"></i>
             </div>
             <h2 class="fw-bold mb-3">Request Received!</h2>
-            <p class="text-muted">Thank you for sharing your project details. I'll review your information and get back to you within 24–48 hours.</p>
+            <p class="text-muted">Thank you for sharing your project details. I'll review your information and get back to you within 12 hours.</p>
             <button class="btn primary-btn mt-4 px-5" onclick="location.reload()">Fill Again</button>
           </div>
         `;
